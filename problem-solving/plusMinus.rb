@@ -27,5 +27,3 @@ arr = gets.rstrip.split.map(&:to_i)
 
 result = plusMinus(arr)
 puts result.join("\n")
-
-puts plusMinus([-4, 3, -9, 0, 4, 1])
