@@ -6,14 +6,14 @@ def plusMinus(arr)
   zero_numbers = []
 
   arr.each do |i|
-      if i > 0
-          positive_numbers << i
-      elsif i < 0
-          negative_numbers << i
-      else
-          zero_numbers << i
-      end
+  if i > 0
+    positive_numbers << i
+  elsif i < 0
+    negative_numbers << i
+  else
+    zero_numbers << i
   end
+end
 
   positive_ratio = (positive_numbers.count / n).round(6)
   negative_ratio = (negative_numbers.count / n).round(6)

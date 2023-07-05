@@ -10,7 +10,6 @@ import sys
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
 
-
 def miniMaxSum(arr):
     # Write your code here
     n = len(arr) - 1
