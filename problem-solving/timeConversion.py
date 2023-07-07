@@ -4,13 +4,12 @@ def timeConversion(s):
 
     h = int(str_split[0])
 
-    if h == 12 and am_pm == "AM":
-        str_split[0] = "00"
-    elif h == 12 and am_pm == "PM":
-        str_split[0] = "12"
-    elif am_pm == "PM":
-        str_split[0] = str(h + 12)
-    else:
-        str_split[0]
+    if h != 12 and am_pm == "PM":
+        h += 12
+    elif h == 12 and am_pm == "AM":
+        h = 0
 
+    str_split[0] = str(h).zfill(2)
     return(':'.join(str_split))
+
+# print(timeConversion("06:00:00AM"))
