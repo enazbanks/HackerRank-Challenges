@@ -12,4 +12,4 @@ def timeConversion(s):
     str_split[0] = str(h).zfill(2)
     return(':'.join(str_split))
 
-# print(timeConversion("06:00:00AM"))
+print(timeConversion("06:00:00AM"))
