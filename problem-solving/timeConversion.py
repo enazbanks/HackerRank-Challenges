@@ -1,9 +1,16 @@
-from datetime import datetime
+def timeConversion(s):
+    am_pm = s[-2:]
+    str_split = s[:-2].split(':')
 
-str = '07:30:00'
-date_str = str.split(':')
-print(date_str)
-#date_format = '%H:%M:%S'
+    h = int(str_split[0])
 
-#date_obj = datetime.strptime(date_str, date_format)
-#print(date_obj)
+    if h == 12 and am_pm == "AM":
+        str_split[0] = "00"
+    elif h == 12 and am_pm == "PM":
+        str_split[0] = "12"
+    elif am_pm == "PM":
+        str_split[0] = str(h + 12)
+    else:
+        str_split[0]
+
+    return(':'.join(str_split))
